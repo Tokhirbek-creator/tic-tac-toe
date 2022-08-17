@@ -62,3 +62,17 @@
 .input-8 {
   border-right: var(--border-thickness) dashed var(--border-color);
 }
+
+@media (min-width: 100px) and (max-width: 550px) {
+.board {
+  width: 82vw;
+  height: 40%;
+  }
+}
+
+@media (min-width: 550px) and (max-width: 1000px) {
+  .board {
+    width: 70vw;
+    height: 50%;
+  }
+}
