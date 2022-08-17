@@ -26,5 +26,6 @@ module.exports = {
     'react/prop-types': 0,
     'no-unused-expressions': 0,
     'no-bitwise': 0,
+    'react/no-unescaped-entities': 0,
   },
 };

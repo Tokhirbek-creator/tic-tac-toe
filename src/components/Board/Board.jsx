@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import './board.css';
 
 function Board({
-  reset, setReset, winner, setWinner,
+  reset, setReset, winner, setWinner, first, second,
 }) {
   const [turn, setTurn] = useState(0);
   const [data, setData] = useState(Array(9).fill(''));
@@ -73,8 +73,8 @@ function Board({
     };
 
     if (checkWin()) {
-      setWinner(turn === 0 ? 'Player 2 Wins!'
-        : 'Player 1 Wins!');
+      setWinner(turn === 0 ? `${second} Wins!`
+        : `${first} Wins!`);
     } else if (checkTie()) {
       setWinner("It's a Tie!");
     }

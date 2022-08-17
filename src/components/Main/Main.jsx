@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import Board from '../Board/Board';
 import Users from '../Users/Users';
-import './app.css';
+import './main.css';
 
-function App() {
+function Main({ first, second }) {
   const [reset, setReset] = useState(false);
   const [winner, setWinner] = useState('');
 
@@ -24,10 +24,12 @@ function App() {
         setReset={setReset}
         winner={winner}
         setWinner={setWinner}
+        first={first}
+        second={second}
       />
-      <Users />
+      <Users first={first} second={second} />
     </div>
   );
 }
 
-export default App;
+export default Main;
